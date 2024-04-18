@@ -4,6 +4,7 @@ import AddNumber from './Components/AddNumber'
 import Canvas from './Components/Canvas'
 import { useState } from 'react'
 import "./styles.css";
+import Footer from './Components/Footer'
 function App() {
 
   const [data, setData] = useState([]);
@@ -18,6 +19,7 @@ function App() {
       <AddNumber data={data} rawData={rawData} minHeight={minHeight} maxHeight={maxHeight} setData={setData} setRawData={setRawData} setMinHeight={setMinHeight} setMaxHeight={setMaxHeight} disabled={disabled}/>
       <Buttons data={data} disabled={disabled} setData={setData} setDisabled={setDisabled}/>
       <Canvas data={data} minHeight={minHeight} maxHeight={maxHeight}/>
+      <Footer minHeight={minHeight} maxHeight={maxHeight}/>
     </div>
   )
 }
